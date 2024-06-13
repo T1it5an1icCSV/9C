@@ -1,0 +1,49 @@
+﻿<Window x:Class="_99.Excel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_99"
+        mc:Ignorable="d"
+        Title="Excel" Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4.5*"/>
+            <RowDefinition Height="0.7*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="new" Grid.Column="0" Grid.Row="0" Content="Cоздать Excel файл" Click="Create_Excel_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+            <Button x:Name="exist" Grid.Row="0" Grid.Column="1" Content="Открыть Excel файл" Click="Open_Excel_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="Добавить колонку" Click="Add_Column_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+            <Button Grid.Row="0" Grid.Column="4" Content="Очистить датагрид" Click="Clear_DataGrid_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+            <Button Grid.Row="0" Grid.Column="5" Content="Очистить таблицу" Click="Clear_Table_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+            <TextBox x:Name="namecol" Grid.Row="1" Grid.Column="2"  TextWrapping="Wrap" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+            <TextBlock Text="Введите название колонки" TextWrapping="Wrap" TextAlignment="Center" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="35"/>
+            <Button x:Name="delrow" Grid.Row="0" Grid.Column="3" Content="Удалить строку" Click="Delete_Row_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="150"/>
+        </Grid>
+        <DataGrid x:Name="grid" Grid.Row="1"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Exit" Grid.Column="1" Content="Выход" Click="Exit_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="49" Width="300"/>
+            <Button x:Name="Send" Content="Отправить файл" Click="Send_Excel_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="49" Width="300"/>
+            <Button x:Name="Save" Grid.Column="2" Content="Сохранить файл" Click="Save_Excel_Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="49" Width="300"/>
+        </Grid>
+    </Grid>
+</Window>
